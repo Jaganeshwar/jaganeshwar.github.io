@@ -1,36 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name | Embedded Engineer</title>
-    <style>
-        body { font-family: Arial; margin: 40px; background-color: #f4f4f4; }
-        h1 { color: #333; }
-        .section { margin-bottom: 30px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name | Embedded Systems Engineer</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background: #0f172a;
+        color: #e2e8f0;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 40px 10%;
+        text-align: center;
+        background: #111827;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        color: #38bdf8;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        color: #94a3b8;
+    }
+
+    section {
+        padding: 50px 10%;
+    }
+
+    h2 {
+        color: #38bdf8;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #38bdf8;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .card {
+        background: #1e293b;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        background: #334155;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111827;
+        color: #94a3b8;
+    }
+
+    a {
+        color: #38bdf8;
+        text-decoration: none;
+    }
+
+    @media(max-width: 768px){
+        header, section {
+            padding: 30px 5%;
+        }
+    }
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>Your Name</h1>
-    <p><b>Embedded Systems Engineer | STM32 | ESP32 | IoT</b></p>
+    <p>Embedded Systems Engineer | STM32 | ESP32 | IoT Developer</p>
+</header>
 
-    <div class="section">
-        <h2>About Me</h2>
-        <p>I am an Embedded Engineer specializing in STM32 and ESP32 projects.</p>
+<section>
+    <h2>About Me</h2>
+    <p>
+        Embedded Systems Engineer with hands-on experience in STM32 and ESP32-based system design.
+        Skilled in microcontroller programming, hardware interfacing, communication protocols,
+        and real-time embedded applications.
+    </p>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <b>Programming:</b> C, Embedded C, Arduino
+    </div>
+    <div class="card">
+        <b>Microcontrollers:</b> STM32F103, ESP32, PIC
+    </div>
+    <div class="card">
+        <b>Protocols:</b> UART, I2C, SPI, CAN
+    </div>
+    <div class="card">
+        <b>Tools:</b> Keil, STM32CubeMX, Proteus
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>IoT Off-Terrain Adventure Robot</h3>
+        <p>Developed an ESP32-CAM based robotic system with live video streaming and wireless control.</p>
     </div>
 
-    <div class="section">
-        <h2>Projects</h2>
-        <ul>
-            <li>IoT Off-Terrain Robot (ESP32-CAM)</li>
-            <li>Automated Restroom Cleaning System (STM32)</li>
-            <li>QR Code Generator using ESP32 + TFT</li>
-        </ul>
+    <div class="card">
+        <h3>Automated Restroom Cleaning System</h3>
+        <p>Designed STM32-based contactless sanitization system using IR sensors and servo motor control.</p>
     </div>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
+    <div class="card">
+        <h3>QR Code Generator using ESP32 + TFT</h3>
+        <p>Implemented SPI-based TFT display system to dynamically generate and display QR codes.</p>
     </div>
+
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: yourmail@gmail.com</p>
+    <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+</section>
+
+<footer>
+    © 2026 Your Name | Embedded Systems Portfolio
+</footer>
 
 </body>
 </html>
