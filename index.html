@@ -3,85 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAGANESHWAR | Embedded Developer</title>
+<title>Jaganeshwar | Embedded Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-    body {
-        background: #0f172a;
-        color: #e2e8f0;
-        line-height: 1.6;
-    }
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    scroll-behavior:smooth;
+}
 
-    header {
-        padding: 40px 10%;
-        text-align: center;
-        background: #111827;
-    }
+/* HERO */
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
 
-    header h1 {
-        font-size: 2.5rem;
-        color: #38bdf8;
-    }
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    -webkit-background-clip:text;
+    color:transparent;
+}
 
-    header p {
-        margin-top: 10px;
-        font-size: 1.1rem;
-        color: #94a3b8;
-    }
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+    color:#94a3b8;
+}
 
-    section {
-        padding: 50px 10%;
-    }
+.btn{
+    margin-top:30px;
+    padding:12px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#38bdf8,#6366f1);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+    display:inline-block;
+}
 
-    h2 {
-        color: #38bdf8;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #38bdf8;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
+.btn:hover{
+    transform:scale(1.05);
+}
 
-    .card {
-        background: #1e293b;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        transition: 0.3s;
-    }
+/* SECTION */
+section{
+    padding:80px 10%;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-        background: #334155;
-    }
+h2{
+    font-size:2rem;
+    margin-bottom:40px;
+    position:relative;
+    display:inline-block;
+}
 
-    ul {
-        margin-left: 20px;
-    }
+h2::after{
+    content:'';
+    width:60%;
+    height:3px;
+    background:#38bdf8;
+    position:absolute;
+    bottom:-10px;
+    left:0;
+}
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #111827;
-        color: #94a3b8;
-    }
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    transition:0.4s ease;
+}
 
-    a {
-        color: #38bdf8;
-        text-decoration: none;
-    }
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(56,189,248,0.1);
+}
 
-    @media(max-width: 768px){
-        header, section {
-            padding: 30px 5%;
-        }
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CONTACT */
+.contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    text-decoration:underline;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    color:#94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    section{
+        padding:60px 5%;
     }
+    header h1{
+        font-size:2.2rem;
+    }
+}
 </style>
 </head>
 
@@ -89,67 +141,95 @@
 
 <header>
     <h1>Jaganeshwar A</h1>
-    <p>Embedded Developer</p>
+    <p>Embedded Systems Developer | IoT Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>
-       Enthusiastic Electronics graduate with expertise in embedded systems design and
-       development. Skilled in programming languages, microcontrollers, and protocols.
-       passionate about designing innovative solutions and seeking a challenging role in
-       embedded systems. 
-    </p>
+    <div class="card">
+        Enthusiastic Electronics graduate specializing in embedded systems, IoT integration, and microcontroller-based design. Passionate about developing smart automation solutions and innovative embedded applications.
+    </div>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
-    <div class="card">
-        <b>Programming:</b> C, Embedded C, VHDL
-    </div>
-    <div class="card">
-        <b>Microcontrollers:</b> STM32F103C6T6, ESP32CAM, PIC!6F887, ARDUINO UNO
-    </div>
-    <div class="card">
-        <b>Protocols:</b> UART, I2C, SPI
-    </div>
-    <div class="card">
-        <b>Tools:</b> Keil uVision v5, Proteus 8 Profeesional, MPLAB X IDE v6.00 ,EASYEDA PRO v2.2
-   </div>
-    <div class="card">
-        <b>Sensors & Modules:</b>  Ultrasonic sensor, Temperature sensor, Proximity sensor, RTC, EEPROM, Bluetooth, GSM.
+    <div class="grid">
+        <div class="card"><b>Programming:</b> C, Embedded C, VHDL</div>
+        <div class="card"><b>Microcontrollers:</b> STM32F103, ESP32, PIC16F887, Arduino</div>
+        <div class="card"><b>Protocols:</b> UART, I2C, SPI</div>
+        <div class="card"><b>Tools:</b> Keil, MPLAB X, Proteus, EasyEDA</div>
+        <div class="card"><b>Modules:</b> GSM, Bluetooth, RTC, EEPROM, Sensors</div>
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>IoT Off-Terrain Adventure Robot</h3>
-        <p>Designed and developed an IoT-enabled robot using ESP32-CAM with real-time video streaming over Wi-Fi. 
-           Implemented DC motor control via L298N driver, remote navigation logic, and ensured stable firmware operation through testing and debugging.</p>
+        Designed ESP32-CAM based IoT robot with Wi-Fi video streaming and remote navigation using L298N motor driver.
     </div>
 
     <div class="card">
         <h3>Automated Restroom Cleaning System</h3>
-        <p>Developed an automated restroom cleaning system using STM32F103 with IR-based door detection and state-machine controlled sanitization sequence (pump, heater, fan, lights).
-           Implemented SysTick timing and LCD interfacing using register-level embedded C programming.</p>
+        STM32-based intelligent cleaning system with IR detection, state-machine control, and LCD status display.
     </div>
 
     <div class="card">
-        <h3>AUTOMATIC CLIMATE CONTROL IN CAR USING PIC 16F887</h3>
-        <p>Developed an automotive climate control system using PIC16F887 with Embedded C.
-           Implemented temperature monitoring and automatic HVAC control using relays and motors, with real-time LCD display and keypad input. 
-           Tested and debugged firmware using MPLAB X IDE.</p>
+        <h3>Automotive Climate Control (PIC16F887)</h3>
+        Embedded C firmware for automatic temperature monitoring and HVAC control with keypad & LCD interface.
     </div>
+</section>
 
+<section>
+    <h2>Certifications & Workshops</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>Embedded Systems Certification</h3>
+            <p>Hands-on training in PIC & STM32 microcontrollers covering GPIO, ADC, PWM, Timers, Interrupts and communication protocols.</p>
+        </div>
+
+        <div class="card">
+            <h3>IoT & ESP32 Workshop</h3>
+            <p>Workshop on ESP32, Wi-Fi communication, cloud integration and real-time monitoring systems.</p>
+        </div>
+
+        <div class="card">
+            <h3>PCB Design Using EasyEDA</h3>
+            <p>Designed schematics, PCB layouts and generated Gerber files for fabrication.</p>
+        </div>
+
+        <div class="card">
+            <h3>VLSI / Digital Design Workshop</h3>
+            <p>Implemented digital logic design and VHDL simulations using EDA tools.</p>
+        </div>
+
+    </div>
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>Email: jaganeshwar1802@gmail.com</p>
-    <p>GitHub: <a href="#">github.com/jaganeshwar</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/jaganeshwar18</a></p>
+    <div class="card contact">
+        <p>Email:
+            <a href="mailto:jaganeshwar1802@gmail.com">
+                jaganeshwar1802@gmail.com
+            </a>
+        </p>
+
+        <p>GitHub:
+            <a href="https://github.com/jaganeshwar" target="_blank">
+                https://github.com/jaganeshwar
+            </a>
+        </p>
+
+        <p>LinkedIn:
+            <a href="https://www.linkedin.com/in/jaganeshwar18" target="_blank">
+                https://www.linkedin.com/in/jaganeshwar18
+            </a>
+        </p>
+    </div>
 </section>
 
 <footer>
@@ -158,3 +238,4 @@
 
 </body>
 </html>
+
